@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://fq0rjo818v5r"]
+
+[ext_resource type="Script" path="res://cuboid.cs" id="1_ejmcs"]
+[ext_resource type="Script" path="res://Levels/MeshInstance3D2.cs" id="2_gseic"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_j3n3i"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_2wu5o"]
+radius = 0.25
+height = 1.5
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.27107, 0, 0)
+mesh = SubResource("ArrayMesh_j3n3i")
+script = ExtResource("1_ejmcs")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.84676, 0.531975, 0, -0.531975, 0.84676, 0, 1.88767, 2.80697)
+fov = 69.1907
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 2, 0, 0)
+mesh = SubResource("CapsuleMesh_2wu5o")
+script = ExtResource("2_gseic")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.0461, 3.07896)
+omni_range = 11.1412

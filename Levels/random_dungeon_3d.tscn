@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://1lrvlutmim0h"]
+
+[ext_resource type="Script" path="res://Levels/random_dungeon_3d.cs" id="1_qm6nu"]
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_qm6nu")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.84676, 0.531975, 0, -0.531975, 0.84676, -1.90735e-06, 11.7682, 16.991)
+fov = 69.1907
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.719, 3.27219, 3.07919)
+omni_range = 15.0187
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 10.0
+autostart = true

@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://bnq8jehpyagh8"]
+
+[ext_resource type="PackedScene" uid="uid://cy3hekwclpr01" path="res://Players/p_mona.tscn" id="1_m8v5u"]
+[ext_resource type="Shader" path="res://Levels/wailing.gdshader" id="1_ugv3y"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_u5xxm"]
+size = Vector2(100, 100)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5roti"]
+render_priority = 0
+shader = ExtResource("1_ugv3y")
+shader_parameter/albedo = Color(0.6, 0.6, 0.6, 1)
+shader_parameter/specular = null
+shader_parameter/metallic = 0.0
+shader_parameter/roughness = 0.5
+shader_parameter/point_size = null
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_8qwn0"]
+data = PackedVector3Array(50, 0, 50, -50, 0, 50, 50, 0, -50, -50, 0, 50, -50, 0, -50, 50, 0, -50)
+
+[node name="Wailing" type="Node"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.260505, -0.552391, 0.791834, 0, 0.820152, 0.572146, -0.965473, 0.149047, -0.213653, 0, 0, 0)
+light_energy = 0.5
+shadow_enabled = true
+
+[node name="Ground" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0588021, 0.00300264, -0.0108457)
+mesh = SubResource("PlaneMesh_u5xxm")
+surface_material_override/0 = SubResource("ShaderMaterial_5roti")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Ground"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_8qwn0")
+
+[node name="Mona" parent="." instance=ExtResource("1_m8v5u")]
