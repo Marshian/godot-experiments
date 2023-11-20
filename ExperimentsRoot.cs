@@ -11,12 +11,10 @@ public partial class ExperimentsRoot : Node2D
 
 	public void OnSceneChange(string targetScene)
 	{
-		GD.Print($"Scene Change Target: {targetScene}");
 		var nextScene = ((PackedScene)ResourceLoader.Load(targetScene)).Instantiate();
 		_levelTarget.AddChild(nextScene);
 		_currentLevel?.QueueFree();
 		_currentLevel = nextScene;
-		_experimentsMenu.IsPaused = false;
 	}
 	
 	public override void _Ready()

@@ -29,29 +29,34 @@ public partial class ExperimentsMenu : CanvasLayer
 		GetTree().Quit();
 	}
 
-	public void OnMartinButtonDown()
+	private void OnMartinButtonDown()
 	{
 		EmitSignal(SignalName.SceneChange, "res://Levels/Martin.tscn");
+		IsPaused = false;
 	}
 
 	private void OnWailingButtonDown()
 	{
 		EmitSignal(SignalName.SceneChange, "res://Levels/wailing.tscn");
+		IsPaused = false;
 	}
 
 	private void OnRandomDungeonButtonDown()
 	{
 		EmitSignal(SignalName.SceneChange, "res://Levels/random_dungeon_3d.tscn");
+		IsPaused = false;
 	}
 
 	private void OnMeshButtonDown()
 	{
 		EmitSignal(SignalName.SceneChange, "res://Levels/mesh_gen.tscn");
+		IsPaused = false;
 	}
 
 	private void OnInfiniteTileButtonDown()
 	{
 		EmitSignal(SignalName.SceneChange, "res://Levels/Infinite/Infinite.tscn");
+		IsPaused = false;
 	}
 
 	[Signal]
