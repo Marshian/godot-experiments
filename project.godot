@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Experiments"
-run/main_scene="res://MainMenu.tscn"
+run/main_scene="res://ExperimentsRoot.tscn"
 config/features=PackedStringArray("4.1", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 

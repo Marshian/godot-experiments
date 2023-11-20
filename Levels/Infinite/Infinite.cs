@@ -18,7 +18,6 @@ public partial class Infinite : Node2D
 	{
 		if (_cbTam == null)
 		{
-			GD.Print("Failed to find CBTam");
 			return;
 		}
 

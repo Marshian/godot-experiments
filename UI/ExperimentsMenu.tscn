@@ -1,0 +1,66 @@
+[gd_scene load_steps=3 format=3 uid="uid://boarh2osywkkr"]
+
+[ext_resource type="Script" path="res://UI/ExperimentsMenu.cs" id="1_5akco"]
+
+[sub_resource type="Theme" id="Theme_vav1v"]
+default_font_size = 10
+
+[node name="ExperimentsMenu" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_5akco")
+
+[node name="Background" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.137255, 0.180392, 0.329412, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_vav1v")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="Martin" type="Button" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "Martin"
+
+[node name="Wailing" type="Button" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "Wailing"
+
+[node name="RandomDungeon" type="Button" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "Random Dungeon Generator
+"
+
+[node name="MeshGen" type="Button" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "MeshGen"
+
+[node name="InfiniteTile" type="Button" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "Infinite Tiling"
+
+[node name="Resume" type="Button" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "Resume"
+
+[node name="Exit" type="Button" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "Exit"
+
+[connection signal="button_down" from="CenterContainer/VBoxContainer/Martin" to="." method="OnMartinButtonDown"]
+[connection signal="button_down" from="CenterContainer/VBoxContainer/Wailing" to="." method="OnWailingButtonDown"]
+[connection signal="button_down" from="CenterContainer/VBoxContainer/RandomDungeon" to="." method="OnRandomDungeonButtonDown"]
+[connection signal="button_down" from="CenterContainer/VBoxContainer/MeshGen" to="." method="OnMeshButtonDown"]
+[connection signal="button_down" from="CenterContainer/VBoxContainer/InfiniteTile" to="." method="OnInfiniteTileButtonDown"]
+[connection signal="button_down" from="CenterContainer/VBoxContainer/Resume" to="." method="OnResumeButtonDown"]
+[connection signal="button_down" from="CenterContainer/VBoxContainer/Exit" to="." method="OnExitButtonDown"]

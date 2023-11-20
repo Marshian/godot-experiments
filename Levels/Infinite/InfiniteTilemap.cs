@@ -43,8 +43,8 @@ public partial class InfiniteTilemap : TileMap
 				
 				// GetNoise2D returns values from -1 to 1, remap to integers from 0 - 4 by adding 1 (0 - 2) and multiplying by 2 (0 - 4)
 				var moist = (int)((moisture.GetNoise2D(cellPos.X, cellPos.Y) + 1) * 2);
-				var temp = (int)((moisture.GetNoise2D(cellPos.X, cellPos.Y) + 1) * 2);
-				var alt = (int)((moisture.GetNoise2D(cellPos.X, cellPos.Y) + 1) * 2);
+				var temp = (int)((temperature.GetNoise2D(cellPos.X, cellPos.Y) + 1) * 2);
+				var alt = (int)((altitude.GetNoise2D(cellPos.X, cellPos.Y) + 1) * 2);
 
 				var terrainTile = GetTerrainTile(moist, temp, alt);
 				
@@ -59,12 +59,10 @@ public partial class InfiniteTilemap : TileMap
 		{
 			return new Vector2I(3, temp);
 		}
-		else
+		
+		if (moist > 2)
 		{
-			if (moist > 2)
-			{
-				moist = 2;
-			}
+			moist = 2;
 		}
 		
 		return new Vector2I(moist, temp);
