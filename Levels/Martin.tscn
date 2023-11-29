@@ -1,10 +1,10 @@
 [gd_scene load_steps=10 format=3 uid="uid://bcs5bcjoaf10o"]
 
 [ext_resource type="PackedScene" uid="uid://ci3bbhn3xyrad" path="res://Props/Bush.tscn" id="1_1ymrd"]
-[ext_resource type="Texture2D" uid="uid://dfputrq7hybs5" path="res://Action RPG Resources/World/DirtTileset.png" id="2_eumhi"]
+[ext_resource type="Texture2D" uid="uid://dfputrq7hybs5" path="res://Resources/Action RPG Resources/World/DirtTileset.png" id="2_eumhi"]
 [ext_resource type="PackedScene" uid="uid://dc2l0nb7sd5gi" path="res://Players/Hero.tscn" id="2_g8gv6"]
-[ext_resource type="Texture2D" uid="uid://brf3bjb6unp4j" path="res://Action RPG Resources/World/CliffTileset.png" id="3_2pvhj"]
-[ext_resource type="Texture2D" uid="uid://3yvqkidra6b6" path="res://Action RPG Resources/World/GrassBackground.png" id="3_c507n"]
+[ext_resource type="Texture2D" uid="uid://brf3bjb6unp4j" path="res://Resources/Action RPG Resources/World/CliffTileset.png" id="3_2pvhj"]
+[ext_resource type="Texture2D" uid="uid://3yvqkidra6b6" path="res://Resources/Action RPG Resources/World/GrassBackground.png" id="3_c507n"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b7gco"]
 texture = ExtResource("3_2pvhj")

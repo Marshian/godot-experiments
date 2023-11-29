@@ -59,6 +59,12 @@ public partial class ExperimentsMenu : CanvasLayer
 		IsPaused = false;
 	}
 
+	private void OnBiomesButtonDown()
+	{
+		EmitSignal(SignalName.SceneChange, "res://Levels/Biomes/BiomeMap.tscn");
+		IsPaused = false;
+	}
+
 	[Signal]
 	public delegate void SceneChangeEventHandler(string targetScene);
 

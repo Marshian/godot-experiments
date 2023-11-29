@@ -49,6 +49,11 @@ text = "MeshGen"
 layout_mode = 2
 text = "Infinite Tiling"
 
+[node name="Biomes" type="Button" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "Biomes
+"
+
 [node name="Resume" type="Button" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
 text = "Resume"
@@ -62,5 +67,6 @@ text = "Exit"
 [connection signal="button_down" from="CenterContainer/VBoxContainer/RandomDungeon" to="." method="OnRandomDungeonButtonDown"]
 [connection signal="button_down" from="CenterContainer/VBoxContainer/MeshGen" to="." method="OnMeshButtonDown"]
 [connection signal="button_down" from="CenterContainer/VBoxContainer/InfiniteTile" to="." method="OnInfiniteTileButtonDown"]
+[connection signal="button_down" from="CenterContainer/VBoxContainer/Biomes" to="." method="OnBiomesButtonDown"]
 [connection signal="button_down" from="CenterContainer/VBoxContainer/Resume" to="." method="OnResumeButtonDown"]
 [connection signal="button_down" from="CenterContainer/VBoxContainer/Exit" to="." method="OnExitButtonDown"]

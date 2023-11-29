@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://duv2m3qm614ch"]
+
+[ext_resource type="Script" path="res://Levels/Biomes/ChunkedVoronoi.cs" id="1_j3evn"]
+[ext_resource type="Script" path="res://Levels/Biomes/VoronoiView.cs" id="2_5aeb5"]
+
+[node name="ChunkedVoronoi" type="Node2D"]
+script = ExtResource("1_j3evn")
+
+[node name="VoronoiView" type="Node2D" parent="."]
+script = ExtResource("2_5aeb5")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 11.0
+offset_top = 35.0
+offset_right = 72.0
+offset_bottom = 61.0
+text = "Voronoi"
